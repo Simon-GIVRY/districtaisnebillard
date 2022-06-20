@@ -1,0 +1,168 @@
+body{
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: #F6F6F6;
+}
+
+header{
+
+    nav{
+        max-width: 1920px;
+        background-color: #345765;
+        display: flex;
+        flex-direction: row-reverse;
+        
+
+
+    }
+
+    ul{
+    display: flex;
+    list-style: none;
+    margin-right: 17rem;
+
+    }
+
+
+    li{
+
+
+
+        
+        
+        
+        a{
+            color: white;
+            text-decoration: none;
+            padding: 3rem 2.5rem;
+
+        }
+    }
+
+    
+    
+}
+main{
+    max-width: 1050px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    
+    h1{
+    
+        color: #34A58A;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 60px;
+        letter-spacing: 0.06em;
+        text-align: left;
+        margin: 7rem 0 3.5rem 0;
+    
+    }
+    
+    
+    img{
+        max-width: 1400px;
+        height: 560px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 7rem;
+    }
+
+    h2{
+        color: #6B5B54;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 0.06em;
+    text-align: left;
+
+    }
+
+
+    iframe{
+        border-radius: 10px;
+        border: 5px solid white;
+        stroke: solid;
+    margin-bottom: 10rem;
+    }
+
+
+
+    div{
+        display: flex;
+        flex-direction: row;
+
+        div{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+
+    section.coords {
+
+        a{
+            color: #34A58A;
+            text-decoration: none;
+            
+        }
+    }
+
+    section.lastNews{
+        background-color: #FFFFFF;
+
+
+
+        a#toutVoir{
+            color: white;
+            padding: 1rem 2rem;
+            background-color: #34A58A;
+            border-radius: 5px;
+        }
+        
+        
+        div{
+            display: flex   ;
+            flex-direction: row;
+
+            div{
+                display: flex;
+                flex-direction: column;
+            }
+            article{
+                img{
+                    width: 330px;
+                    height: 300px;
+                }
+                
+                
+                h3{
+
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 32px;
+                    letter-spacing: 0.06em;
+                    text-align: left;
+
+                }
+
+                .date{
+                    color: #345765;
+                }
+
+            }
+
+
+        }
+    }
+
+
+
+
+
+}
+
+    
+
