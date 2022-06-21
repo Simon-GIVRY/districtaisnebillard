@@ -14,7 +14,7 @@ header nav {
 header ul {
   display: flex;
   list-style: none;
-  margin-right: 17rem;
+  margin-right: 12rem;
 }
 header li a {
   color: white;
@@ -23,7 +23,7 @@ header li a {
 }
 
 main {
-  max-width: 1050px;
+  max-width: 1400px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -43,6 +43,9 @@ main img {
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 7rem;
+}
+main p {
+  max-width: 750px;
 }
 main h2 {
   color: #6B5B54;
@@ -66,12 +69,17 @@ main div div {
   display: flex;
   flex-direction: column;
 }
-main section.coords a {
+main address a {
   color: #34A58A;
   text-decoration: none;
+  font-weight: normal;
+  font-style: none !important;
 }
 main section.lastNews {
+  max-width: 1600px;
   background-color: #FFFFFF;
+  /*  padding: 0 2rem 2.75rem  2rem ;
+  */
 }
 main section.lastNews a#toutVoir {
   color: white;
@@ -79,27 +87,76 @@ main section.lastNews a#toutVoir {
   background-color: #34A58A;
   border-radius: 5px;
 }
-main section.lastNews div {
+main section.lastNews div:first-child {
+  /* padding-top: 2.75rem; */
+}
+main section.lastNews div.articleTitle {
+  padding: 2.75rem 2rem 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main section.lastNews div.allArticle {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 2rem 4.25rem 2rem;
+}
+main section.lastNews div.allArticle div {
   display: flex;
   flex-direction: row;
 }
-main section.lastNews div div {
-  display: flex;
-  flex-direction: column;
-}
-main section.lastNews div article img {
+main section.lastNews div.allArticle div img {
   width: 330px;
   height: 300px;
+  /* margin: 3rem 2rem 4 2rem; */
 }
-main section.lastNews div article h3 {
+main section.lastNews div.allArticle div.article {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+}
+main section.lastNews div.allArticle article {
+  max-width: 400px;
+}
+main section.lastNews div.allArticle article p {
+  background: linear-gradient(0deg, #FFFFFF 49.33%, rgba(255, 255, 255, 0) 100%);
+  margin: 1.75rem 2.5rem 0 0.75rem;
+}
+main section.lastNews div.allArticle article h3 {
+  margin-left: 0.75rem;
   font-size: 24px;
   font-weight: 600;
   line-height: 32px;
   letter-spacing: 0.06em;
   text-align: left;
 }
-main section.lastNews div article .date {
+main section.lastNews div.allArticle article .date {
   color: #345765;
+}
+
+footer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #345765;
+  color: white;
+}
+footer div {
+  margin: 0 auto;
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+}
+footer section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 125px;
+  justify-content: space-evenly;
+}
+footer img {
+  width: 150px;
+  height: 115px;
 }
 
 /*# sourceMappingURL=style.css.map */

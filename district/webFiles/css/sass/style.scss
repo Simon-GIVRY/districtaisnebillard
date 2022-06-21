@@ -20,7 +20,7 @@ header{
     ul{
     display: flex;
     list-style: none;
-    margin-right: 17rem;
+    margin-right: 12rem;
 
     }
 
@@ -44,7 +44,7 @@ header{
     
 }
 main{
-    max-width: 1050px;
+    max-width: 1400px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -70,6 +70,9 @@ main{
         margin-bottom: 7rem;
     }
 
+    p{
+        max-width: 750px;
+    }
     h2{
         color: #6B5B54;
     font-size: 36px;
@@ -101,17 +104,23 @@ main{
     }
 
 
-    section.coords {
+    address{
 
-        a{
+        a{ 
             color: #34A58A;
             text-decoration: none;
+            font-weight: normal;
+            font-style: none !important;
             
         }
     }
 
     section.lastNews{
+       
+        max-width: 1600px;
         background-color: #FFFFFF;
+       /*  padding: 0 2rem 2.75rem  2rem ;
+ */
 
 
 
@@ -121,25 +130,56 @@ main{
             background-color: #34A58A;
             border-radius: 5px;
         }
+        div:first-child{
+
+
+            /* padding-top: 2.75rem; */
+        }
+        
+        div.articleTitle{
+            padding: 2.75rem 2rem 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
         
         
-        div{
-            display: flex   ;
-            flex-direction: row;
+        div.allArticle{
+            display: flex  ;
+            flex-direction: column;
+            padding: 3rem 2rem 4.25rem 2rem;
+            
+
 
             div{
                 display: flex;
-                flex-direction: column;
-            }
-            article{
+                flex-direction: row;
                 img{
                     width: 330px;
                     height: 300px;
+                    /* margin: 3rem 2rem 4 2rem; */
+                }
+            }
+
+            div.article{
+                align-items: flex-start ;
+                display: flex;
+                flex-direction: row;
+
+
+            }
+
+            article{
+                max-width: 400px;
+
+                p{
+                    background: linear-gradient(0deg, #FFFFFF 49.33%, rgba(255, 255, 255, 0) 100%);
+                    margin: 1.75rem 2.5rem 0 0.75rem;
+
                 }
                 
-                
                 h3{
-
+                    margin-left: 0.75rem;
                     font-size: 24px;
                     font-weight: 600;
                     line-height: 32px;
@@ -164,5 +204,34 @@ main{
 
 }
 
+footer{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #345765;
+    color: white;
     
+    
+    div{
+        margin: 0 auto;
+        max-width: 1400px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 125px;
+        justify-content: space-evenly;
+    }
+
+
+
+    img{
+        width: 150px;
+        height: 115px;
+    }
+}
 
