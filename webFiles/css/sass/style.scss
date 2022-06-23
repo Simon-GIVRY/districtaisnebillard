@@ -1,3 +1,5 @@
+
+
 body{
     margin: 0;
     font-family: 'Lato', sans-serif;
@@ -44,6 +46,7 @@ header{
     
 }
 main{
+
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -79,6 +82,7 @@ main{
 
 
     h2{
+        margin: 4.125rem 0 2rem 0;
         color: #6B5B54;
     font-size: 36px;
     font-weight: 600;
@@ -105,6 +109,8 @@ main{
         max-width: 1400px;
         display: flex;
         flex-direction: row;
+
+
         
         
         div{
@@ -130,6 +136,12 @@ main{
 
 
     address{
+        
+
+        p{
+            margin: 1.25rem 0;
+
+        }
 
         a{ 
             color: #34A58A;
@@ -190,14 +202,19 @@ main{
             }
 
             div.article{
+                
                 align-items: flex-start ;
                 display: flex;
                 flex-direction: row;
 
-
+                
+                
             }
-
+            
             article{
+                position: relative;
+                display: flex;
+                flex-direction: column;
                 
                 
                 p{
@@ -208,6 +225,17 @@ main{
                     font-size: 18px;
                     line-height: 22px;
                     letter-spacing: 0.04em;
+                    
+                    
+                    &::before {
+                        content:'';
+                        width:100%;
+                        height:100%;    
+                        position:absolute;
+                        left:0;
+                        top:0;
+                        background:linear-gradient(transparent 0px, white 250px);
+                      }
                 }
                 
                 h3{
@@ -221,6 +249,7 @@ main{
                 }
 
                 .date{
+                    margin-top: 0;
                     color: #345765;
                 }
 
@@ -228,13 +257,21 @@ main{
             }
             
             div.savoirPlus{
-
-
+                flex-direction: row-reverse;
+                align-content: space-between;
                 display: flex;
                 align-items: center;
+                position: relative;
+                top: 0;
+                right: 0;
 
 
                 a{
+
+                    bottom: 0;
+                    top: 0;
+                    position: absolute;
+
                     text-decoration: none;
                     color: #34A58A;
                     font-family: 'Montserrat';
@@ -301,6 +338,17 @@ footer{
 
     }
 
+    p{
+        color: white;
+        text-decoration: none;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: 0.06em;
+    }
+
     a{
         color: white;
         text-decoration: none;
@@ -313,6 +361,7 @@ footer{
 
         &:hover{
             text-decoration: underline;
+            text-underline-offset: 0.4rem;
         }
     }
 
