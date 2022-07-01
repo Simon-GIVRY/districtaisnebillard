@@ -114,6 +114,7 @@ main address a {
   font-weight: 400;
   font-size: 20px;
   line-height: 25px;
+  letter-spacing: 0.1em;
 }
 main section.lastNews {
   margin: 0 auto;
@@ -126,19 +127,22 @@ main section.lastNews a#toutVoir {
   padding: 1rem 2rem;
   background-color: #34A58A;
   border-radius: 5px;
+  text-decoration: none;
 }
 main section.lastNews div.articleTitle {
-  padding: 2.75rem 0 0 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   max-width: 100%;
 }
+main section.lastNews h2 {
+  margin: 3rem 0;
+}
 main section.lastNews div.allArticle {
   display: flex;
   flex-direction: column;
-  padding: 3rem 0 4.25rem 0;
+  padding: 0 0 4.25rem 0;
   margin: 0;
   max-width: 100%;
   /* flex-wrap: ; */
