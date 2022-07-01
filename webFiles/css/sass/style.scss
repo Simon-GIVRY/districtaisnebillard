@@ -11,8 +11,9 @@ header{
     width: 100%;
     background-color: #345765;
     nav{
-        max-width: 1920px;
-        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+        /* display: flex; */
         flex-direction: row-reverse;
         
 
@@ -22,7 +23,9 @@ header{
     ul{
     display: flex;
     list-style: none;
-    margin-right: 8rem;
+    /* margin-right: 8rem; */
+    margin: 0;
+    flex-direction: row-reverse;
 
     }
 
@@ -37,7 +40,8 @@ header{
         a{
             color: white;
             text-decoration: none;
-            padding: 3rem 1.25rem;
+            padding: 2.5rem 1.25rem;
+            display: block;
 
         }
     }
@@ -47,9 +51,9 @@ header{
 }
 main{
     padding: 0 1rem;
-    align-items: center;
+    /* align-items: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; */
     margin: 0 auto;
     
     h1{
@@ -69,11 +73,13 @@ main{
     div{
         display: flex;
         flex-direction: column;
+        margin: 0 auto;
         
     }
     
     img{
         max-width: 1400px;
+        width: 100%;
         height: 560px;
         object-fit: cover;
         border-radius: 10px;
@@ -158,7 +164,7 @@ main{
     }
 
     section.lastNews{
-       
+        margin: 0 auto;
         max-width: 1600px;
         background-color: #FFFFFF;
         padding: 0 2rem 2.75rem  2rem ;
@@ -175,25 +181,29 @@ main{
 
 
         div.articleTitle{
-            padding: 2.75rem 2rem 0 2rem;
+            padding: 2.75rem 0 0 0;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+            max-width: 100%;
         }
         
         
         div.allArticle{
             display: flex  ;
             flex-direction: column;
-            padding: 3rem 2rem 4.25rem 2rem;
-            
+            padding: 3rem 0 4.25rem 0;
+            margin: 0;
+            max-width: 100%;
+            flex-wrap: ;
             
             
             div{
-                width: 100%;
+                /* width: 100%; */
                 display: flex;
                 flex-direction: row;
+                max-width: 100%;
                 img{
                     width: 330px;
                     height: 300px;
@@ -202,10 +212,15 @@ main{
             }
 
             div.article{
-                
+                margin-bottom: 4rem;
                 align-items: flex-start ;
                 display: flex;
                 flex-direction: row;
+
+
+                img{
+                    margin-bottom: 0;
+                }
 
                 
                 
@@ -215,6 +230,8 @@ main{
                 position: relative;
                 display: flex;
                 flex-direction: column;
+                height: 100%;
+                max-width: 450px;
                 
                 
                 p{
@@ -255,23 +272,24 @@ main{
                 
             }
             
-            span.savoirPlus{
+            /* span.savoirPlus{
                 flex-direction: row-reverse;
                 align-content: space-between;
                 display: block;
                 align-items: center;
                 position: relative;
+                display: block;
                 top: 0;
                 right: 0;
-                background: linear-gradient(0deg, #FFFFFF 50%, rgba(255, 255, 255, 0) 100%);
+                background: linear-gradient(0deg, #FFFFFF 50%, rgba(255, 255, 255, 0) 100%); */
                 
 
                 a{
                     
                     bottom: 0;
-                    top: 0;
+                    right: 0;
                     position: absolute;
-
+                    display: block;
                     text-decoration: none;
                     color: #34A58A;
                     font-family: 'Montserrat';
@@ -303,7 +321,7 @@ main{
                 }
 
 
-            }
+            
 
         }
     }
@@ -316,7 +334,6 @@ main{
 
 footer{
     align-items: center;
-    display: flex;
     flex-direction: column;
     background-color: #345765;
     color: white;
@@ -326,7 +343,7 @@ footer{
     div{
         margin: 0 auto;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         text-align: center;
     }
 
