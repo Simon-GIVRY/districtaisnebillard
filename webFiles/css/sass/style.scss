@@ -176,8 +176,9 @@ main {
     section.lastNews {
         margin: 0 auto;
         max-width: 1600px;
-        background-color: #FFFFFF;
-        padding: 0 2rem 2.75rem 2rem;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        padding: 0 2rem 0 2rem;
 
 
 
@@ -188,6 +189,7 @@ main {
             background-color: #34A58A;
             border-radius: 5px;
             text-decoration: none;
+            position: static;
         }
 
 
@@ -202,75 +204,94 @@ main {
         h2{
             margin: 3rem 0;
         }
-
+        
 
         div.allArticle {
             display: flex;
-            flex-direction: column;
-            padding: 0 0 4.25rem 0;
+            flex-wrap: wrap;
             margin: 0;
             max-width: 100%;
             /* flex-wrap: ; */
-
-
+            justify-content: space-between;
+            flex-direction: row;
+            
+            
             div {
-                /* width: 100%; */
+                width: 100%;
                 display: flex;
-                flex-direction: row;
-                max-width: 100%;
-
+                
                 img {
                     width: 330px;
                     height: 300px;
                     margin: 3rem 2rem 4 2rem;
                 }
             }
-
+            
             div.article {
                 margin-bottom: 4rem;
                 align-items: flex-start;
                 display: flex;
                 flex-direction: row;
-
-
-                img {
-                    margin-bottom: 0;
-                }
-
-
-
+                
+                
+                
+                
+                
             }
-
+            
+            img {
+                margin: 0;
+                max-width: 337px;
+                height: 300px;
+                z-index: 1;
+            }
+            p {
+                /* margin: 1.75rem 2.5rem 0 0.75rem; */
+                font-family: 'lato';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                letter-spacing: 0.04em;
+                max-height: 4rem;
+                overflow: hidden;
+                position: relative;
+            }
+            span.enSavoirPlus{
+                background: linear-gradient(0deg, #FFFFFF 50%, rgba(255, 255, 255, 0) 100%);
+                display: inline-block;
+                width: 100%;
+                padding-top: 6rem;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+    
+    
+                a{
+                    display: block;
+                }
+            }
             article {
                 position: relative;
                 display: flex;
-                flex-direction: column;
                 height: 100%;
-                max-width: 450px;
+                width: calc(50% - 1.25rem);
+                margin-bottom: 4rem;
+                
+                
+                
 
 
-                p {
-                    margin: 1.75rem 2.5rem 0 0.75rem;
-                    font-family: 'lato';
-                    font-style: normal;
-                    font-weight: 400;
-                    font-size: 18px;
-                    line-height: 22px;
-                    letter-spacing: 0.04em;
 
-
-                    &::before {
-                        content: '';
-                        width: 100%;
-                        height: 100%;
-                        position: absolute;
-                        left: 0;
-                        top: 0;
-                    }
+                    
                 }
 
+                
+                
+
                 h3 {
-                    margin: 0 0 0 0.75rem;
+                    /* margin: 0 0 0 0.75rem; */
                     font-size: 24px;
                     font-weight: 600;
                     line-height: 32px;
@@ -287,16 +308,7 @@ main {
 
             }
 
-            /* span.savoirPlus{
-                flex-direction: row-reverse;
-                align-content: space-between;
-                display: block;
-                align-items: center;
-                position: relative;
-                display: block;
-                top: 0;
-                right: 0;
-                background: linear-gradient(0deg, #FFFFFF 50%, rgba(255, 255, 255, 0) 100%); */
+
 
 
             a {
@@ -314,6 +326,7 @@ main {
                 line-height: 24px;
                 letter-spacing: 0.06em;
                 text-transform: uppercase;
+                
 
                 &:first-of-type {
                     margin: 1rem 0 1rem 1rem;
@@ -325,7 +338,7 @@ main {
 
             }
 
-            span {
+            span.plus {
 
                 padding: 0.25rem 0.60rem;
                 border-radius: 100%;
@@ -335,20 +348,11 @@ main {
 
                 }
             }
-
-
-
-
         }
     }
 
-
-
-
-
-}
-
 footer {
+    margin-top: 4.75rem;
     align-items: center;
     flex-direction: column;
     background-color: #345765;
@@ -445,4 +449,201 @@ footer {
 
 
 
-@media screen and (max-width:768px) {}
+@media screen and (max-width:1169px) {
+
+  
+    
+    main{
+
+
+        div.coords{
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            
+    
+            div{
+                
+                align-items: center;
+                
+            }
+    
+            section.presentation{
+                display: flex;
+                align-items: center;
+                text-align: center;
+                flex-direction: column;
+            }
+    
+        }
+        
+        section.lastNews{
+            
+            
+            div.allArticle{
+                flex-direction: column;
+                align-items: center;
+
+                
+                article{ 
+                    
+                    width: 80%;
+
+
+                    img{
+                        margin-right: 1rem;
+                    }
+                    
+                }
+                
+            }
+            
+        }
+    }
+
+
+    footer{
+        div{
+            flex-direction: column;
+
+            section{
+                 margin-top: 3.5rem; 
+            
+            
+                &:last-of-type{
+                    margin-bottom: 2rem;
+                }
+            }
+
+
+            
+
+
+
+            h2{
+                margin: 1rem;
+
+            }
+
+            p{
+                margin: 0;
+            }
+        }
+
+
+        div.madeBy{
+
+            padding: 2rem 0;
+
+        }
+
+    }
+}
+
+
+
+@media screen and (max-width:768px) {
+
+    header{
+
+        nav{
+
+        }
+
+        ul{
+            justify-content: space-evenly;
+            padding-left: 0;
+        }
+    }
+
+body{
+    margin: 0;
+}
+main{
+    
+    div{
+        h1{
+            margin-top: 4rem;
+       }
+
+       img{
+        margin-bottom: 3rem;
+       }
+
+    }
+
+    h2{
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+
+    div.coords{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        
+
+        div{
+            
+            align-items: center;
+            
+        }
+
+        section.presentation{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            p{
+                margin-right: 0 ;
+            }
+        }
+
+
+        iframe{
+            margin-bottom: 6rem;
+        }
+
+    }
+
+
+    section.lastNews{
+
+        div.allArticle{
+            flex-direction: column;
+            align-items: center;
+
+
+            h3{
+                text-align: center;   
+            }
+        }
+
+
+        article{
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            
+        
+        }
+        
+        div{
+            align-items: center;
+            
+            
+            span.enSavoirPlus{
+       
+            }
+        }
+
+    }
+
+
+}
+
+
+
+}
