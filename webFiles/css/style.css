@@ -18,6 +18,26 @@ body {
   font-family: "Lato", sans-serif;
   font-family: "Roboto", sans-serif;
   background-color: #F6F6F6;
+
+
+
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url(../../src/fonts/icomoon.ttf);
+}
+
+span.icons{
+  font-family: 'icomoon';
+  color: #34A58A;
+  text-decoration: none;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  
+
+
 }
 /* fin global */
 
@@ -66,7 +86,6 @@ main h1 {
   font-family: "Montserrat";
   font-size: 40px;
   font-weight: 700;
-  line-height: 60px;
   letter-spacing: 0.06em;
   text-align: left;
   margin: 7rem auto 3.5rem auto;
@@ -82,19 +101,28 @@ main h2 {
   color: #6B5B54;
   font-size: 36px;
   font-weight: 600;
-  line-height: 36px;
   letter-spacing: 0.06em;
   text-align: left;
   font-family: "Montserrat";
   font-style: normal;
 }
+
+main .mapContainer {
+  overflow: hidden;
+  margin-bottom: 10rem;
+  padding: 1rem 0;
+  border: 5px solid white;
+}
+
 main iframe {
   max-width: 550px;
+  width: 550px;
   border-radius: 10px;
-  border: 5px solid white;
-  stroke: solid;
-  margin-bottom: 10rem;
+  /* stroke: solid; */
+  margin-top: -9.375rem;
+  margin-bottom: -9.375rem;  
 }
+
 main div.coords {
   max-width: 1400px;
   display: flex;
@@ -112,14 +140,33 @@ main div.coords section.presentation p {
   font-family: "lato";
   font-weight: 300;
   font-size: 20px;
-  line-height: 25px;
   letter-spacing: 0.05em;
   text-justify: auto;
   margin-right: 5.75rem;
 }
+
+div.address{
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+
+}
+
 main address p {
   margin: 1.25rem 0;
 }
+
+main address span{
+  display: inline-block;
+  position: relative;
+  top: 0;
+}
+
+main address p:first-of-type{
+display: inline-block;
+}
+
+
 main address a {
   color: #34A58A;
   text-decoration: none;
@@ -128,8 +175,7 @@ main address a {
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-  line-height: 25px;
-  letter-spacing: 0.1em;
+
 }
 main section.lastNews {
   margin: 0 auto;
@@ -168,6 +214,7 @@ main section.lastNews div.allArticle {
 main section.lastNews div.allArticle div {
   width: 100%;
   display: flex;
+  padding-left: 1rem;
 }
 main section.lastNews div.allArticle div img {
   width: 330px;
@@ -191,7 +238,6 @@ main section.lastNews div.allArticle p {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 22px;
   letter-spacing: 0.04em;
   max-height: 4rem;
   overflow: hidden;
@@ -324,7 +370,6 @@ footer div.madeBy p {
   font-style: normal;
   font-weight: 300;
   font-size: 20px;
-  line-height: 25px;
   position: relative;
 }
 /* fin footer  */
@@ -338,6 +383,7 @@ footer div.madeBy p {
   }
   main div.coords div {
     align-items: center;
+    justify-content: center;
   }
   main div.coords section.presentation {
     display: flex;
@@ -411,9 +457,7 @@ footer div.madeBy p {
   main div.coords section.presentation p {
     margin-right: 0;
   }
-  main div.coords iframe {
-    margin-bottom: 6rem;
-  }
+
   main section.lastNews div.allArticle {
     flex-direction: column;
     align-items: center;
@@ -421,6 +465,14 @@ footer div.madeBy p {
   main section.lastNews div.allArticle h3 {
     text-align: center;
   }
+  main section.lastNews span.enSavoirPlus{
+    padding-top: 5rem;
+    right: -10px !important;
+
+
+  }
+
+
   main section.lastNews article {
     flex-direction: column;
     align-items: center;
