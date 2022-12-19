@@ -13,10 +13,10 @@ header {
         max-width: 1400px;
         margin: 0 auto;
         /* display: flex; */
-        flex-direction: row-reverse;
 
-
-
+        div.burgerMenuContainer{
+            display: none;
+        }
     }
 
     ul {
@@ -24,7 +24,8 @@ header {
         list-style: none;
         /* margin-right: 8rem; */
         margin: 0;
-        flex-direction: row-reverse;
+        flex-direction: row;
+        justify-content: flex-end;
 
     }
 
@@ -38,6 +39,12 @@ header {
             text-decoration: none;
             padding: 2.5rem 1.25rem;
             display: block;
+
+            &:hover{
+                text-decoration: underline;
+                text-underline-offset: 0.25rem;
+                background-color: #3e6575;
+            }
 
         }
     }
@@ -110,13 +117,23 @@ main {
 
 
 
-    iframe {
-        max-width: 550px;
-        border-radius: 10px;
+    .mapContainer{
+        overflow: hidden;
         border: 5px solid white;
-        stroke: solid;
-        margin-bottom: 10rem;
+        width: 600px;
+        border-radius: 10px;
+        height: auto;
+        padding: 7rem 0;
+
+        iframe {
+            margin-bottom: 10rem;
+            height: 600px;
+            width: 100%;
+            margin-top: -150px;
+            margin-bottom: -200px;
+        }
     }
+
 
 
 
@@ -152,6 +169,7 @@ main {
 
 
     address {
+        margin-bottom: 11.25rem;
 
 
         p {
@@ -169,7 +187,19 @@ main {
             font-size: 20px;
             line-height: 25px;
             letter-spacing: 0.1em;
+            display: flex;
+            align-items: center;
 
+        }
+
+        span.icons{
+            margin-right: 0.75rem;
+        }
+
+        div.address{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
         }
     }
 
@@ -232,15 +262,11 @@ main {
                 align-items: flex-start;
                 display: flex;
                 flex-direction: row;
-                
-                
-                
-                
-                
+
             }
             
             img {
-                margin: 0;
+                margin: 0 0.75rem 0;
                 max-width: 337px;
                 height: 300px;
                 z-index: 1;
@@ -278,13 +304,7 @@ main {
                 height: 100%;
                 width: calc(50% - 1.25rem);
                 margin-bottom: 4rem;
-                
-                
-                
-
-
-
-                    
+        
                 }
 
                 
@@ -408,8 +428,29 @@ footer {
     section {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-evenly;
+        margin-bottom: 3.75rem;
+
+        &:first-of-type{
+            a{
+                display: flex;
+                // flex-direction: row;
+                align-items: center;
+        
+            }
+
+            p{
+                display: flex;
+                align-items: center;
+                text-align: center;
+            }
+
+            span.icons{
+                margin-right: 1rem;
+            }
+
+        }
     }
 
 
@@ -445,21 +486,69 @@ footer {
     }
 }
 
+.icons {
+    background-image: url(../../src/img/spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.vector {
+    width: 17px;
+    height: 21px;
+    background-position: -1px -1px;
+}
+
+.vector-1 {
+    width: 26px;
+    height: 20px;
+    background-position: -20px -1px;
+}
+
+.vector-2 {
+    width: 22px;
+    height: 21px;
+    background-position: -20px -23px;
+}
+
+.vector-3 {
+    width: 21px;
+    height: 21px;
+    background-position: -48px -1px;
+}
+
+.vector-4 {
+    width: 24px;
+    height: 20px;
+    background-position: -44px -24px;
+}
+
+.vector-5 {
+    width: 20px;
+    height: 20px;
+    background-position: -1px -46px;
+}
 
 
 
 
-@media screen and (max-width:1169px) {
+
+
+@media screen and (max-width:1320px) {
 
   
     
     main{
+
+        h2{
+            text-align: center;
+        }
 
 
         div.coords{
             flex-direction: column;
             align-items: center;
             text-align: center;
+            margin-bottom: 7rem;
             
     
             div{
@@ -474,6 +563,28 @@ footer {
                 text-align: center;
                 flex-direction: column;
             }
+
+            address{
+                margin-bottom: 1rem ;
+                text-align: center;
+
+                div.address{
+                    justify-content: center;
+                }
+
+                p{
+                    justify-content: center;
+
+                }
+
+                a{
+                    justify-content: center;
+
+                }
+            }
+
+
+
     
         }
         
@@ -504,29 +615,20 @@ footer {
 
     footer{
         div{
-            flex-direction: column;
-
+            text-align: left;
+            
+            
             section{
-                 margin-top: 3.5rem; 
-            
-            
-                &:last-of-type{
-                    margin-bottom: 2rem;
-                }
+                margin: 4rem 0;
             }
 
-
-            
-
-
-
             h2{
-                margin: 1rem;
+                margin: 1.5rem 0 1.5rem;
 
             }
 
             p{
-                margin: 0;
+                margin: 0.5rem 0;
             }
         }
 
@@ -542,7 +644,7 @@ footer {
 
 
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:900px) {
 
     header{
 
@@ -569,8 +671,9 @@ main{
     }
 
     h2{
-        margin-top: 2rem;
         text-align: center;
+        
+        
     }
 
 
@@ -594,11 +697,6 @@ main{
             p{
                 margin-right: 0 ;
             }
-        }
-
-
-        iframe{
-            margin-bottom: 6rem;
         }
 
     }
@@ -638,6 +736,115 @@ main{
 
 }
 
+
+footer{
+    div{
+        flex-direction: column;
+        align-items: center;
+
+        section{
+            align-items: center;
+            margin: 3rem 0;
+
+
+            &:first-of-type{
+                margin-top: 3rem;
+            }
+            
+            &:last-of-type{
+                margin-bottom: 3rem;
+                flex-direction: row;
+            }
+
+        }
+
+        footer{
+            section{
+                margin: 1rem 0;
+            }
+        }
+
+    }
+}
+
+
+
+}
+
+@media screen and (max-width:675px) {
+
+    header{
+        nav{
+            display: flex;
+            justify-content: flex-end;
+            li{
+                display: none;
+            }
+    
+            div.burgerMenuContainer{
+                display: block;
+                // background-color: red;
+                height: 80px;
+                width: 65px;
+                position: relative;
+                margin-right: 1rem;
+                padding: 0.5rem 0;
+                
+                span.burgerMenu{
+                    position: absolute;
+                    transform: translateY(-50%);
+                    display: block;
+                    top: 50%;
+                    height: 5px;
+                    background-color: white;
+                    width: 100%;
+                    border-radius: 15px;
+
+                    &::before{
+                        content: "";
+                        height: 5px;
+                        border-radius: 15px;
+                        background-color: white;
+                        width: 100%;
+                        position: absolute;
+                        top: -15px;
+                    }
+
+                    &::after{
+                        content: "";
+                        height: 5px;
+                        background-color: white;
+                        width: 100%;
+                        border-radius: 15px;
+                        position: absolute;
+                        top: 15px;
+
+                    }
+                }
+            }
+        }
+
+    }
+
+
+
+    main{
+
+
+        div.mapContainer{
+            max-width: 500px;
+            height: 100%;
+            
+            iframe{
+                max-height: 600px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:530px) {
 
 
 }

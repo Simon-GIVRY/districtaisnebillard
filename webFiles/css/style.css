@@ -1,47 +1,9 @@
-/* Tableau de contenu  */
-/*                     */
-/*       Global        */
-/*  header & navbar    */
-/*        main         */
-/*        footer       */
-/*                     */
-/*      mediaqueries   */
-/*        1170px       */
-/*        768px        */
-
-
-
-
-/* global */
 body {
   margin: 0;
   font-family: "Lato", sans-serif;
   font-family: "Roboto", sans-serif;
   background-color: #F6F6F6;
-
-
-
 }
-
-@font-face {
-  font-family: 'icomoon';
-  src: url(../../src/fonts/icomoon.ttf);
-}
-
-span.icons{
-  font-family: 'icomoon';
-  color: #34A58A;
-  text-decoration: none;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 20px;
-  
-
-
-}
-/* fin global */
-
-/* header */
 
 header {
   width: 100%;
@@ -50,13 +12,18 @@ header {
 header nav {
   max-width: 1400px;
   margin: 0 auto;
-  flex-direction: row-reverse;
+  /* display: flex; */
+}
+header nav div.burgerMenuContainer {
+  display: none;
 }
 header ul {
   display: flex;
   list-style: none;
+  /* margin-right: 8rem; */
   margin: 0;
-  flex-direction: row-reverse;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 header li a {
   color: white;
@@ -64,11 +31,17 @@ header li a {
   padding: 2.5rem 1.25rem;
   display: block;
 }
-/* fin header  */
+header li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+  background-color: #3e6575;
+}
 
-/* main */
 main {
   padding: 0 1rem;
+  /* align-items: center;
+  display: flex;
+  flex-direction: column; */
   margin: 0 auto;
 }
 main img {
@@ -86,6 +59,7 @@ main h1 {
   font-family: "Montserrat";
   font-size: 40px;
   font-weight: 700;
+  line-height: 60px;
   letter-spacing: 0.06em;
   text-align: left;
   margin: 7rem auto 3.5rem auto;
@@ -101,28 +75,27 @@ main h2 {
   color: #6B5B54;
   font-size: 36px;
   font-weight: 600;
+  line-height: 36px;
   letter-spacing: 0.06em;
   text-align: left;
   font-family: "Montserrat";
   font-style: normal;
 }
-
 main .mapContainer {
   overflow: hidden;
-  margin-bottom: 10rem;
-  padding: 1rem 0;
   border: 5px solid white;
-}
-
-main iframe {
-  max-width: 550px;
-  width: 550px;
+  width: 600px;
   border-radius: 10px;
-  /* stroke: solid; */
-  margin-top: -9.375rem;
-  margin-bottom: -9.375rem;  
+  height: auto;
+  padding: 7rem 0;
 }
-
+main .mapContainer iframe {
+  margin-bottom: 10rem;
+  height: 600px;
+  width: 100%;
+  margin-top: -150px;
+  margin-bottom: -200px;
+}
 main div.coords {
   max-width: 1400px;
   display: flex;
@@ -140,33 +113,17 @@ main div.coords section.presentation p {
   font-family: "lato";
   font-weight: 300;
   font-size: 20px;
+  line-height: 25px;
   letter-spacing: 0.05em;
   text-justify: auto;
   margin-right: 5.75rem;
 }
-
-div.address{
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center;
-
+main address {
+  margin-bottom: 11.25rem;
 }
-
 main address p {
   margin: 1.25rem 0;
 }
-
-main address span{
-  display: inline-block;
-  position: relative;
-  top: 0;
-}
-
-main address p:first-of-type{
-display: inline-block;
-}
-
-
 main address a {
   color: #34A58A;
   text-decoration: none;
@@ -175,7 +132,18 @@ main address a {
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-
+  line-height: 25px;
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+}
+main address span.icons {
+  margin-right: 0.75rem;
+}
+main address div.address {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 main section.lastNews {
   margin: 0 auto;
@@ -214,7 +182,6 @@ main section.lastNews div.allArticle {
 main section.lastNews div.allArticle div {
   width: 100%;
   display: flex;
-  padding-left: 1rem;
 }
 main section.lastNews div.allArticle div img {
   width: 330px;
@@ -228,16 +195,18 @@ main section.lastNews div.allArticle div.article {
   flex-direction: row;
 }
 main section.lastNews div.allArticle img {
-  margin: 0;
+  margin: 0 0.75rem 0;
   max-width: 337px;
   height: 300px;
   z-index: 1;
 }
 main section.lastNews div.allArticle p {
+  /* margin: 1.75rem 2.5rem 0 0.75rem; */
   font-family: "lato";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
+  line-height: 22px;
   letter-spacing: 0.04em;
   max-height: 4rem;
   overflow: hidden;
@@ -264,6 +233,7 @@ main section.lastNews div.allArticle article {
   margin-bottom: 4rem;
 }
 main section.lastNews div.allArticle h3 {
+  /* margin: 0 0 0 0.75rem; */
   font-size: 24px;
   font-weight: 600;
   line-height: 32px;
@@ -300,9 +270,6 @@ main section.lastNews span.plus:hover {
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2509803922);
 }
 
-/* fin main  */
-
-/* footer */
 footer {
   margin-top: 4.75rem;
   align-items: center;
@@ -352,8 +319,21 @@ footer a:hover {
 footer section {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-evenly;
+  margin-bottom: 3.75rem;
+}
+footer section:first-of-type a {
+  display: flex;
+  align-items: center;
+}
+footer section:first-of-type p {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+footer section:first-of-type span.icons {
+  margin-right: 1rem;
 }
 footer img {
   width: 200px;
@@ -370,26 +350,83 @@ footer div.madeBy p {
   font-style: normal;
   font-weight: 300;
   font-size: 20px;
+  line-height: 25px;
   position: relative;
 }
-/* fin footer  */
 
-/* mediaqueries 1170px */
-@media screen and (max-width: 1169px) {
+.icons {
+  background-image: url(../../src/img/spritesheet.png);
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.vector {
+  width: 17px;
+  height: 21px;
+  background-position: -1px -1px;
+}
+
+.vector-1 {
+  width: 26px;
+  height: 20px;
+  background-position: -20px -1px;
+}
+
+.vector-2 {
+  width: 22px;
+  height: 21px;
+  background-position: -20px -23px;
+}
+
+.vector-3 {
+  width: 21px;
+  height: 21px;
+  background-position: -48px -1px;
+}
+
+.vector-4 {
+  width: 24px;
+  height: 20px;
+  background-position: -44px -24px;
+}
+
+.vector-5 {
+  width: 20px;
+  height: 20px;
+  background-position: -1px -46px;
+}
+
+@media screen and (max-width: 1320px) {
+  main h2 {
+    text-align: center;
+  }
   main div.coords {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-bottom: 7rem;
   }
   main div.coords div {
     align-items: center;
-    justify-content: center;
   }
   main div.coords section.presentation {
     display: flex;
     align-items: center;
     text-align: center;
     flex-direction: column;
+  }
+  main div.coords address {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  main div.coords address div.address {
+    justify-content: center;
+  }
+  main div.coords address p {
+    justify-content: center;
+  }
+  main div.coords address a {
+    justify-content: center;
   }
   main section.lastNews div.allArticle {
     flex-direction: column;
@@ -402,27 +439,22 @@ footer div.madeBy p {
     margin-right: 1rem;
   }
   footer div {
-    flex-direction: column;
+    text-align: left;
   }
   footer div section {
-    margin-top: 3.5rem;
-  }
-  footer div section:last-of-type {
-    margin-bottom: 2rem;
+    margin: 4rem 0;
   }
   footer div h2 {
-    margin: 1rem;
+    margin: 1.5rem 0 1.5rem;
   }
   footer div p {
-    margin: 0;
+    margin: 0.5rem 0;
   }
   footer div.madeBy {
     padding: 2rem 0;
   }
 }
-
-/* mediaqueries 768px */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   header ul {
     justify-content: space-evenly;
     padding-left: 0;
@@ -437,7 +469,6 @@ footer div.madeBy p {
     margin-bottom: 3rem;
   }
   main h2 {
-    margin-top: 2rem;
     text-align: center;
   }
   main div.coords {
@@ -457,7 +488,6 @@ footer div.madeBy p {
   main div.coords section.presentation p {
     margin-right: 0;
   }
-
   main section.lastNews div.allArticle {
     flex-direction: column;
     align-items: center;
@@ -465,14 +495,6 @@ footer div.madeBy p {
   main section.lastNews div.allArticle h3 {
     text-align: center;
   }
-  main section.lastNews span.enSavoirPlus{
-    padding-top: 5rem;
-    right: -10px !important;
-
-
-  }
-
-
   main section.lastNews article {
     flex-direction: column;
     align-items: center;
@@ -480,6 +502,77 @@ footer div.madeBy p {
   }
   main section.lastNews div {
     align-items: center;
+  }
+  footer div {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer div section {
+    align-items: center;
+    margin: 3rem 0;
+  }
+  footer div section:first-of-type {
+    margin-top: 3rem;
+  }
+  footer div section:last-of-type {
+    margin-bottom: 3rem;
+    flex-direction: row;
+  }
+  footer div footer section {
+    margin: 1rem 0;
+  }
+}
+@media screen and (max-width: 675px) {
+  header nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+  header nav li {
+    display: none;
+  }
+  header nav div.burgerMenuContainer {
+    display: block;
+    height: 80px;
+    width: 65px;
+    position: relative;
+    margin-right: 1rem;
+    padding: 0.5rem 0;
+  }
+  header nav div.burgerMenuContainer span.burgerMenu {
+    position: absolute;
+    transform: translateY(-50%);
+    display: block;
+    top: 50%;
+    height: 5px;
+    background-color: white;
+    width: 100%;
+    border-radius: 15px;
+  }
+  header nav div.burgerMenuContainer span.burgerMenu::before {
+    content: "";
+    height: 5px;
+    border-radius: 15px;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    top: -15px;
+  }
+  header nav div.burgerMenuContainer span.burgerMenu::after {
+    content: "";
+    height: 5px;
+    background-color: white;
+    width: 100%;
+    border-radius: 15px;
+    position: absolute;
+    top: 15px;
+  }
+  main div.mapContainer {
+    max-width: 500px;
+    height: 100%;
+  }
+  main div.mapContainer iframe {
+    max-height: 600px;
+    width: 100%;
   }
 }
 
