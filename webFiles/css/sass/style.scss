@@ -12,8 +12,6 @@ header {
     nav {
         max-width: 1400px;
         margin: 0 auto;
-        /* display: flex; */
-
         div.burgerMenuContainer{
             display: none;
         }
@@ -22,18 +20,13 @@ header {
     ul {
         display: flex;
         list-style: none;
-        /* margin-right: 8rem; */
         margin: 0;
         flex-direction: row;
         justify-content: flex-end;
-
     }
 
 
     li {
-
-
-
         a {
             color: white;
             text-decoration: none;
@@ -48,24 +41,12 @@ header {
 
         }
     }
-
-
-
 }
 
 main {
     padding: 0 1rem;
-    /* align-items: center;
-    display: flex;
-    flex-direction: column; */
     margin: 0 auto;
-
-
-
-
- 
-        
-        
+    
         img {
             width: 100%;
             max-width: 1400px;
@@ -75,8 +56,6 @@ main {
             border-radius: 10px;
             margin-bottom: 7rem;
         }
-
-
 
     h1 {
        
@@ -90,17 +69,13 @@ main {
         text-align: left;
         margin: 7rem auto 3.5rem auto;
         text-transform: uppercase;
-
-
     }
 
     div {
         display: flex;
         flex-direction: column;
         margin: 0 auto;
-
     }
-
 
 
     h2 {
@@ -114,7 +89,6 @@ main {
         font-family: 'Montserrat';
         font-style: normal;
     }
-
 
 
     .mapContainer{
@@ -135,27 +109,20 @@ main {
     }
 
 
-
-
     div.coords {
         max-width: 1400px;
         display: flex;
         flex-direction: row;
-
-
-
 
         div {
             display: flex;
             flex-direction: column;
         }
 
-
         section.presentation {
             width: 100%;
 
             p {
-                /*  max-width: 760px; */
                 font-family: 'lato';
                 font-weight: 300;
                 font-size: 20px;
@@ -210,9 +177,6 @@ main {
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
         padding: 0 2rem 0 2rem;
 
-
-
-
         a#toutVoir {
             color: white;
             padding: 1rem 2rem;
@@ -221,7 +185,6 @@ main {
             text-decoration: none;
             position: static;
         }
-
 
         div.articleTitle {
             display: flex;
@@ -272,7 +235,6 @@ main {
                 z-index: 1;
             }
             p {
-                /* margin: 1.75rem 2.5rem 0 0.75rem; */
                 font-family: 'lato';
                 font-style: normal;
                 font-weight: 400;
@@ -293,7 +255,6 @@ main {
                 right: 0;
                 width: 100%;
     
-    
                 a{
                     display: block;
                 }
@@ -311,7 +272,6 @@ main {
                 
 
                 h3 {
-                    /* margin: 0 0 0 0.75rem; */
                     font-size: 24px;
                     font-weight: 600;
                     line-height: 32px;
